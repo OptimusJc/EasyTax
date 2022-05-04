@@ -6,6 +6,7 @@ const Input = ({ title, classes, type }) => {
       name={title}
       placeholder={title}
       className={["shadow", classes].join(" ")}
+      type={type}
       required
     />
   );

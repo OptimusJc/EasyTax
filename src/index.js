@@ -14,6 +14,7 @@ import App from "./App";
 
 import Home from "./pages/home/Home";
 import Register from "./pages/register/Register";
+import Login from "./pages/login/Login";
 
 const container = document.getElementById("root");
 const root = createRoot(container);
@@ -24,6 +25,7 @@ root.render(
       <Route path="" element={<App />}>
         <Route path="/" element={<Home />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
       </Route>
     </Routes>
   </BrowserRouter>
