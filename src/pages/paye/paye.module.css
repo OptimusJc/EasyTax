@@ -5,3 +5,8 @@
 .col {
     margin-block: 4rem;
 }
+
+.col h3 {
+    text-transform: capitalize;
+    margin-block-end: 2rem;
+}

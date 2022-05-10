@@ -50,8 +50,8 @@ const Paye = () => {
                             </ul>
                         </div>
                     </div>
-
                     <div className={["col", styles.col].join(" ")}>
+                        <h3 className={["h3"]}>paye application form</h3>
                         <div className={[""]}>
                             <div class="mb-3">
                                 <label for="dropdownInput" class="form-label">

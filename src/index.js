@@ -1,7 +1,7 @@
 // bootstrap imports
 import "bootstrap/dist/css/bootstrap.min.css";
-import $ from "jquery";
-import Popper from "popper.js";
+// import $ from "jquery";
+// import Popper from "popper.js";
 import "bootstrap/dist/js/bootstrap.bundle.js";
 
 // react imports
@@ -17,6 +17,8 @@ import Register from "./pages/register/Register";
 import Login from "./pages/login/Login";
 import About from "./pages/about/About";
 import Paye from "./pages/paye/Paye";
+import WitholdingVAT from "./pages/witholding/WitholdingVAT";
+import IndividualTax from "./pages/individual/IndividualTax";
 
 const container = document.getElementById("root");
 const root = createRoot(container);
@@ -30,6 +32,8 @@ root.render(
                 <Route path="/login" element={<Login />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/paye" element={<Paye />} />
+                <Route path="/witholding-vat" element={<WitholdingVAT />} />
+                <Route path="/individual" element={<IndividualTax />} />
             </Route>
         </Routes>
     </BrowserRouter>
