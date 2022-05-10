@@ -1,0 +1,69 @@
+.wrapper .easy_tax {
+    background-color: var(--red);
+    padding: 1rem;
+    margin: 0;
+}
+
+.easy_tax .about_logo {
+    width: 200px;
+    margin-inline: auto;
+}
+.easy_tax .about_logo img {
+    width: 100%;
+}
+
+.col {
+    margin-block: 2rem;
+    padding: 0;
+}
+
+.card_about {
+    background-color: var(--red);
+    margin: 0;
+}
+
+.card .card_header {
+    height: 200px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.card .card_header img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.card .card_body .card_lead,
+.card .card_body h3 {
+    text-transform: capitalize;
+    letter-spacing: 0.8px;
+}
+
+.card .card_body .card_lead {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--red);
+}
+.card .card_body h3 {
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin-block-end: 1rem;
+}
+.card_about p {
+    color: var(--white);
+    margin-block-end: 1.5rem;
+}
+
+.easy_row {
+    padding: 0;
+    margin: 0;
+}
+.easy_row .col {
+    padding-inline: 0;
+    border: none;
+}
+
+.btn_light {
+    color: var(--red);
+    padding: 0.8rem 1.2rem;
+}

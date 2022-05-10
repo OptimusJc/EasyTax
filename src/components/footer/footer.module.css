@@ -1,0 +1,61 @@
+footer {
+    padding-inline: 0 !important;
+}
+
+footer .row {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer_nav {
+    text-transform: capitalize;
+}
+
+.footer_nav ul {
+    margin-block: 1rem;
+}
+.footer_nav ul li:first-child {
+    color: var(--red);
+    margin-block-end: 0.5rem;
+}
+.footer_nav ul li a {
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: var(--black);
+}
+
+ul li {
+    list-style-type: none;
+}
+/* ! come back and fix this  */
+.footer_brand a span.easy {
+    color: var(--black);
+}
+.footer_brand a span.tax {
+    color: var(--red);
+}
+
+.footer_brand p {
+    font-size: 0.9rem;
+}
+
+.footer_brand ul {
+    padding-inline: 0;
+}
+.footer_brand ul li {
+    display: inline-block;
+    padding-inline-end: 2rem;
+}
+.footer_brand ul li svg {
+    height: 1.3rem;
+    width: 1.3rem;
+    color: var(--bs-blue);
+}
+.footer_brand ul li:last-child {
+    margin-block-end: 2rem;
+}
+
+footer .row > p {
+    font-size: 0.9rem;
+    text-align: center;
+}

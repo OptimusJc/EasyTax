@@ -1,34 +1,35 @@
 .input_group .email_icon,
 .input_group .lock_icon {
-  fill: hsla(0, 0%, 10%, 0.4);
-  height: 20px;
-  width: 20px;
+    fill: hsla(0, 0%, 10%, 0.4);
+    height: 20px;
+    width: 20px;
 
-  position: absolute;
-  left: 0.5rem;
-  top: 1rem;
+    position: absolute;
+    left: 0.5rem;
+    top: 1rem;
 }
 
 .input {
-  padding-left: 2rem;
+    padding-left: 2rem;
+    text-transform: lowercase;
 }
 .input_group {
-  position: relative;
+    position: relative;
 }
 
 .form_check {
-  display: flex;
-  align-items: baseline;
-  padding-inline-start: 0;
+    display: flex;
+    align-items: baseline;
+    padding-inline-start: 0;
 }
 .form_check input {
-  width: 20px;
-  margin-inline-end: 1rem;
-  margin-block-end: 5rem;
+    width: 20px;
+    margin-inline-end: 1rem;
+    margin-block-end: 5rem;
 }
 
 .forgot_link a {
-  text-transform: capitalize;
-  color: var(--black);
-  text-decoration: none;
+    text-transform: capitalize;
+    color: var(--black);
+    text-decoration: none;
 }

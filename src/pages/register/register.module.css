@@ -1,78 +1,51 @@
-/* .content_fill {
-  background-color: var(--red);
-  background-position: 20% 10px;
-  padding: 150px;
-  width: 150%;
-  position: absolute;
-  top: -4rem;
-  left: 0rem; 
-
-  transform: skew(10deg, 10deg); 
-   display: none;
-} */
-
-.wrapper .content_fill {
-  background-color: var(--red);
-  background-image: url("../../../images/background.webp");
-  background-repeat: no-repeat;
-  background-blend-mode: multiply;
-
-  height: 100px;
-  width: 100%;
-  z-index: -1;
-  position: absolute;
-  top: 0;
-  left: 0;
-  /* transform: rotate(15deg); */
-}
-
 .wrapper .div_col {
-  display: none;
+    display: none;
 }
 
 .div_col_input .input_div {
-  margin-block-start: 5rem;
+    margin-block-start: 5rem;
 }
 
 .div_col_input .input_div .input {
-  margin-block-end: 2rem;
+    margin-block-end: 2rem;
+    text-transform: lowercase;
 }
 
 .div_col_input .input_div input:focus {
-  outline-color: var(--red);
+    outline-color: var(--red);
 }
 
 .div_col_input .input_div p {
-  text-transform: uppercase;
-  letter-spacing: 0.8px;
-  margin-left: 1rem;
-  position: relative;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-left: 1rem;
+    position: relative;
 }
 
 .div_col_input .input_div p span.dash_before_register {
-  width: 7px;
-  height: 20px;
-  background-color: var(--red);
-  display: block;
-  position: absolute;
-  left: -1rem;
-  top: 0.325rem;
+    width: 7px;
+    height: 20px;
+    background-color: var(--red);
+    display: block;
+    position: absolute;
+    left: -1rem;
+    top: 0.325rem;
 }
 
 .btn_danger {
-  background-color: var(--red);
-  text-transform: capitalize;
-  padding: 0.8rem 2rem;
-  border-radius: 4px;
-  margin-block: 2rem;
+    background-color: var(--red);
+    text-transform: capitalize;
+    padding: 0.8rem 2rem;
+    border-radius: 4px;
+    margin-block: 2rem;
 }
 
 .have_an_account {
-  text-align: center;
-  text-transform: capitalize !important;
+    text-align: center;
+    text-transform: capitalize !important;
 }
 
 .have_an_account .have_an_account_link a {
-  color: var(--red);
-  text-decoration: none;
+    color: var(--red);
+    text-decoration: none;
 }
