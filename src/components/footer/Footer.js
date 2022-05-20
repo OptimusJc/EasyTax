@@ -5,7 +5,7 @@ import { BsFacebook, BsTwitter } from "react-icons/bs";
 const Footer = () => {
     return (
         <footer>
-            <div className={["container"]}>
+            <div className={["container", styles.container].join(" ")}>
                 <div className={["row", styles.row].join(" ")}>
                     <div className={["col", styles.footer_nav].join(" ")}>
                         <ul className={["navbar-nav"]}>

@@ -13,8 +13,12 @@ input::placeholder {
 }
 
 select {
-    background-color: red;
     height: 60px;
     text-transform: capitalize;
     border: none !important;
+}
+
+textarea {
+    height: 160px;
+    color: yellow;
 }

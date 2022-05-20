@@ -10,3 +10,9 @@
     margin-block-end: 1rem;
     text-transform: uppercase;
 }
+
+@media (min-width: 48em) {
+    .sidebar_nav {
+        display: block;
+    }
+}

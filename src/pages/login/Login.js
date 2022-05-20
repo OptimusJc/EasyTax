@@ -10,8 +10,13 @@ const Login = () => {
     return (
         <div className={["container", styles.wrapper].join(" ")}>
             {/* <div className={[styles.content_fill]}></div> */}
-            <div className="row">
-                <div className={["col", styles.div_col].join(" ")}>
+            <div
+                className={[
+                    "row justify-content-center",
+                    styles1.login_row,
+                ].join(" ")}
+            >
+                <div className={["col", "col-md-6", styles.div_col].join(" ")}>
                     <div className={[styles.intro].join(" ")}>
                         <p className="fs-1 text-upper">welcome to easytax</p>
                         <p className="">
@@ -21,7 +26,11 @@ const Login = () => {
                     </div>
                 </div>
 
-                <div className={["col", styles.div_col_input].join(" ")}>
+                <div
+                    className={["col", "col-md-6", styles.div_col_input].join(
+                        " "
+                    )}
+                >
                     <div className={[styles.input_div]}>
                         <p className="fw-bold fs-4">
                             <span
@@ -29,7 +38,7 @@ const Login = () => {
                             ></span>
                             login
                         </p>
-                        <form className={["needs-validation"].join(" ")}>
+                        <form className={["was-validated"].join(" ")}>
                             <div className={[styles1.input_group]}>
                                 <Input
                                     title="email"
@@ -37,7 +46,7 @@ const Login = () => {
                                     classes={[styles.input, styles1.input].join(
                                         " "
                                     )}
-                                    type="text"
+                                    type="email"
                                 />
                                 <BsFillPersonFill
                                     className={[styles1.email_icon]}
@@ -51,20 +60,21 @@ const Login = () => {
                                         " "
                                     )}
                                     type="password"
+                                    pattern="[A-Za-z]"
                                 />
                                 <BsLockFill className={[styles1.lock_icon]} />
                             </div>
 
                             <div className={[styles1.form_check].join(" ")}>
                                 <Input
-                                    clasName="form-check-input"
+                                    clasName="form-check-input "
                                     type="checkbox"
                                     value=""
                                     id="flexCheckDefault"
                                 />
                                 <label
-                                    class="form-check-label"
-                                    for="flexCheckDefault"
+                                    className="form-check-label"
+                                    htmlFor="flexCheckDefault"
                                 >
                                     Remember Me
                                 </label>
@@ -75,7 +85,7 @@ const Login = () => {
                                 " "
                             )}
                         >
-                            <Link to="#">Forgot Password?</Link>
+                            <Link to="/forgot-password">Forgot Password?</Link>
                         </p>
 
                         <div className="d-flex justify-content-center">
@@ -92,7 +102,7 @@ const Login = () => {
                         <p className={[styles.have_an_account]}>
                             new here?
                             <span className={styles.have_an_account_link}>
-                                <Link to="/register">register</Link>
+                                <Link to="/register"> register</Link>
                             </span>
                         </p>
                     </div>

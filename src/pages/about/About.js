@@ -59,13 +59,17 @@ const About = () => {
                         ].join(" ")}
                     >
                         <div className={["col", styles.col].join(" ")}>
-                            <div class={["card", styles.card_about].join(" ")}>
-                                <div class="card-body">
-                                    <h5 class="card-title display-4 fw-normal text-capitalize mb-4">
+                            <div
+                                className={["card", styles.card_about].join(
+                                    " "
+                                )}
+                            >
+                                <div className="card-body">
+                                    <h5 className="card-title display-4 fw-normal text-capitalize mb-4">
                                         need any help? contact us
                                     </h5>
 
-                                    <p class="card-text">
+                                    <p className="card-text">
                                         Some quick example text to build on the
                                         card title and make up the bulk of the
                                         card's content.

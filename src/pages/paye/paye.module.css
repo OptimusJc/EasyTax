@@ -1,7 +1,3 @@
-.sidebar_nav {
-    display: none;
-}
-
 .col {
     margin-block: 4rem;
 }
@@ -9,4 +5,10 @@
 .col h3 {
     text-transform: capitalize;
     margin-block-end: 2rem;
+}
+
+@media (min-width: 48em) {
+    .col {
+        margin-block: 5rem;
+    }
 }

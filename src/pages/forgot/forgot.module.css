@@ -1,0 +1,65 @@
+.lottie_div {
+    width: 300px;
+    height: 300px;
+}
+
+.col {
+    margin-block: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card,
+.card_header {
+    border: none;
+}
+.card .card_header {
+    background-color: var(--white);
+}
+
+.card .card_header h3 {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.card .card_body .btn {
+    background-color: var(--red);
+    text-transform: capitalize;
+    padding-block: 0.8rem;
+    display: grid;
+    width: 100%;
+    margin-block: 2rem;
+}
+
+.card .card_body a {
+    text-decoration: none;
+    color: var(--bs-black);
+    text-transform: capitalize;
+    padding-inline: 95px;
+    padding-block: 0.5rem;
+    text-align: center;
+}
+
+.card .card_body input {
+    padding-left: 2rem;
+    text-transform: lowercase;
+}
+
+.card .card_body input:focus {
+    outline: none;
+}
+
+.card .card_body input:valid,
+.card .card_body input:invalid {
+    outline-width: 2px;
+    outline-style: solid;
+    border-radius: 2px;
+}
+
+.card .card_body input:invalid {
+    outline-color: red;
+}
+.card .card_body input:valid {
+    outline-color: green;
+}

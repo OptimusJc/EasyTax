@@ -7,8 +7,8 @@ const Register = () => {
     return (
         <div className={["container", styles.wrapper].join(" ")}>
             <div className={[styles.content_fill]}></div>
-            <div className="row">
-                <div className={["col", styles.div_col].join(" ")}>
+            <div className="row justify-content-center">
+                <div className={["col", "col-md-6", styles.div_col].join(" ")}>
                     <div className={[styles.intro].join(" ")}>
                         <p className="fs-1 text-upper">welcome to easytax</p>
                         <p className="">
@@ -18,7 +18,11 @@ const Register = () => {
                     </div>
                 </div>
 
-                <div className={["col", styles.div_col_input].join(" ")}>
+                <div
+                    className={["col", "col-md-6", styles.div_col_input].join(
+                        " "
+                    )}
+                >
                     <div className={[styles.input_div]}>
                         <p className="fw-bold fs-4">
                             <span
@@ -31,11 +35,11 @@ const Register = () => {
                             title="textInput"
                             placeholder="example@example.com"
                             classes={[styles.input]}
-                            type="text"
+                            type="email"
                         />
                         <Input
                             title="textInput"
-                            placeholder="1234"
+                            placeholder="kra pin"
                             classes={styles.input}
                             type="text"
                         />
@@ -65,7 +69,7 @@ const Register = () => {
                         <p className={[styles.have_an_account]}>
                             Have an account?
                             <span className={styles.have_an_account_link}>
-                                <Link to="/login">Login</Link>
+                                <Link to="/login"> Login</Link>
                             </span>
                         </p>
                     </div>

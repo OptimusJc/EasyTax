@@ -5,63 +5,62 @@ const Header = () => {
     return (
         <header>
             <nav
-                class={[
+                className={[
                     "navbar navbar-dark bg-light fixed-top",
                     styles.navbar,
                 ].join(" ")}
             >
-                <div class="container-fluid">
-                    <Link class="navbar-brand" to="/">
+                <div className="container-fluid">
+                    <Link className="navbar-brand" to="/">
                         EasyTax
                     </Link>
                     <button
-                        class={["navbar-toggler", styles.navbar_toggler].join(
-                            " "
-                        )}
+                        className={[
+                            "navbar-toggler",
+                            styles.navbar_toggler,
+                        ].join(" ")}
                         type="button"
                         data-bs-toggle="offcanvas"
                         data-bs-target="#offcanvasNavbar"
                         aria-controls="offcanvasNavbar"
                     >
-                        <span class="navbar-toggler-icon"></span>
+                        <span className="navbar-toggler-icon"></span>
                     </button>
                     <div
-                        class={[
+                        className={[
                             "offcanvas offcanvas-end",
                             styles.offcanvas_end,
                         ].join(" ")}
-                        tabindex="-1"
                         id="offcanvasNavbar"
                         aria-labelledby="offcanvasNavbarLabel"
                     >
                         {/* * offcanvas header  */}
-                        <div class="offcanvas-header">
+                        <div className="offcanvas-header">
                             <h5
-                                class="offcanvas-title"
+                                className="offcanvas-title"
                                 id="offcanvasNavbarLabel"
                             >
                                 EasyTax
                             </h5>
                             <button
                                 type="button"
-                                class="btn-close text-reset"
+                                className="btn-close text-reset"
                                 data-bs-dismiss="offcanvas"
                                 aria-label="Close"
                             ></button>
                         </div>
                         {/* * offcanvas body */}
                         <div
-                            class={[
+                            className={[
                                 "offcanvas-body",
                                 styles.offcanvas_body,
                             ].join(" ")}
                         >
-                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
                                 <li className="nav-item">
                                     <Link
                                         to="/"
-                                        nav-link
-                                        active
+                                        className="nav-link"
                                         aria-current="page"
                                     >
                                         Home
@@ -70,8 +69,7 @@ const Header = () => {
                                 <li className="nav-item">
                                     <Link
                                         to="/paye"
-                                        nav-link
-                                        active
+                                        className="nav-link"
                                         aria-current="page"
                                     >
                                         PAYE
@@ -80,8 +78,7 @@ const Header = () => {
                                 <li className="nav-item">
                                     <Link
                                         to="/witholding-vat"
-                                        nav-link
-                                        active
+                                        className="nav-link"
                                         aria-current="page"
                                     >
                                         Witholding VAT
@@ -90,20 +87,19 @@ const Header = () => {
                                 <li className="nav-item">
                                     <Link
                                         to="/individual"
-                                        nav-link
-                                        active
+                                        className="nav-link"
                                         aria-current="page"
                                     >
                                         Individual Tax
                                     </Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link to="/contact" nav-link>
+                                    <Link to="/contact" className="nav-link">
                                         Contact us
                                     </Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link to="/about" nav-link>
+                                    <Link to="/about" className="nav-link">
                                         About
                                     </Link>
                                 </li>
@@ -115,12 +111,12 @@ const Header = () => {
                                 )}
                             >
                                 <li className="nav-item">
-                                    <Link to="/login" nav-link>
+                                    <Link to="/login" className="nav-link">
                                         Login
                                     </Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link to="/register" nav-link>
+                                    <Link to="/register" className="nav-link">
                                         Register
                                     </Link>
                                 </li>

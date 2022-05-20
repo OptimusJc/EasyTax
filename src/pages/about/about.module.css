@@ -1,7 +1,8 @@
 .wrapper .easy_tax {
     background-color: var(--red);
     padding: 1rem;
-    margin: 0;
+    margin-inline: 0;
+    margin-block-start: 4rem;
 }
 
 .easy_tax .about_logo {
@@ -14,7 +15,7 @@
 
 .col {
     margin-block: 2rem;
-    padding: 0;
+    /* padding: 0; */
 }
 
 .card_about {
@@ -66,4 +67,64 @@
 .btn_light {
     color: var(--red);
     padding: 0.8rem 1.2rem;
+}
+
+@media (min-width: 48em) {
+    .wrapper .easy_tax {
+        margin-top: 4rem;
+    }
+    .col {
+        margin-block: 0;
+    }
+    .card {
+        display: flex;
+        align-items: center;
+        margin-block: 3rem;
+    }
+
+    .card .card_header {
+        height: 260px;
+        margin-inline-end: 1rem;
+    }
+
+    .card .card_body {
+        text-align: center;
+        /* margin-inline: 0.5rem; */
+    }
+    .card .card_body p {
+        width: 300px;
+        font-size: 0.9rem;
+    }
+
+    /* * need help row  */
+    .easy_row {
+        text-align: center;
+    }
+    .easy_row .card_about h5 {
+        font-size: 2.5rem;
+    }
+    .easy_row .card_about p {
+        width: 400px;
+        margin-inline: auto;
+    }
+}
+
+@media (min-width: 64em) {
+    .wrapper .easy_tax {
+        margin-top: 5rem;
+    }
+
+    .card .card_header {
+        width: 500px;
+    }
+    .card {
+        justify-content: space-around;
+    }
+}
+
+@media (min-width: 80em) {
+    .card .card_header {
+        width: 600px;
+        height: 300px;
+    }
 }

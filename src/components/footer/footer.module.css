@@ -1,6 +1,9 @@
 footer {
     padding-inline: 0 !important;
 }
+/* footer .container {
+    padding-inline: 0;
+} */
 
 footer .row {
     display: flex;
@@ -58,4 +61,14 @@ ul li {
 footer .row > p {
     font-size: 0.9rem;
     text-align: center;
+}
+
+@media (min-width: 48em) {
+    footer .container .row {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        margin-block-start: 3rem;
+        margin-block-end: 1rem;
+    }
 }

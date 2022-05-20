@@ -1,74 +1,71 @@
-import { Link } from "react-router-dom";
 import InputDropdown from "../../components/input/InputDropdown";
 import Input from "../../components/input/Input";
-
 import styles from "./paye.module.css";
-
 import Footer from "../../components/footer/Footer";
+import SidebarNav from "../../components/sidebar_nav/SidebarNav";
+import { React, useEffect, useState } from "react";
 
 const Paye = () => {
-    const DISABILITY_CHOICE = ["yes", "no"];
+    const DISABILITY_CHOICE = ["no", "yes"];
     const TYPE_OF_RETURN = ["original", "amended"];
     const ENTITY_TYPE = ["head office", "branch"];
     const RESIDENTIAL_STATUS = ["resident", "non-resident"];
     const TYPE_OF_EMPLOYEE = ["primary", "secondary"];
 
+    // states
+    const [disabled, setDisabled] = useState(true);
+
+    useEffect(() => {
+        const dropdownChoice = document.querySelectorAll("select")[4];
+        const exemptionField = document.querySelectorAll("input")[4];
+        const totalDue = document.querySelectorAll("input")[9];
+        totalDue.readOnly = true;
+        exemptionField.disabled = disabled;
+
+        // check if disabled is true: if true enable the exemption cert field
+        dropdownChoice.onchange = function (e) {
+            if (e.target.value === "0") {
+                exemptionField.disabled = true;
+            } else if (e.target.value === "1") {
+                exemptionField.disabled = false;
+                setDisabled(false);
+            }
+        };
+    });
+
     return (
         <div className={[]}>
             <div className={["container"]}>
                 <div className={["row"]}>
-                    <div className={["col", styles.sidebar_nav].join(" ")}>
-                        <div className={[""]}>
-                            <ul className={["nav flex-column"]}>
-                                <li className="nav-item">
-                                    <Link
-                                        to=""
-                                        className="nav-link active"
-                                        aria-current="page"
-                                    >
-                                        paye
-                                    </Link>
-                                </li>
-                                <li className="nav-item">
-                                    <Link
-                                        to=""
-                                        className="nav-link active"
-                                        aria-current="page"
-                                    >
-                                        withholding vat
-                                    </Link>
-                                </li>
-                                <li className="nav-item">
-                                    <Link
-                                        to=""
-                                        className="nav-link active"
-                                        aria-current="page"
-                                    >
-                                        individual
-                                    </Link>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                    <SidebarNav />
                     <div className={["col", styles.col].join(" ")}>
-                        <h3 className={["h3"]}>paye application form</h3>
-                        <div className={[""]}>
-                            <div class="mb-3">
-                                <label for="dropdownInput" class="form-label">
+                        <h3 className={["h3"]}>PAYE</h3>
+                        <form className={[""]}>
+                            <div className="mb-3">
+                                <label
+                                    htmlFor="dropdownInput"
+                                    className="form-label"
+                                >
                                     Type of Return
                                 </label>
                                 <InputDropdown choices={TYPE_OF_RETURN} />
                             </div>
 
-                            <div class="mb-3">
-                                <label for="dropdownInput" class="form-label">
+                            <div className="mb-3">
+                                <label
+                                    htmlFor="dropdownInput"
+                                    className="form-label"
+                                >
                                     Entity Type
                                 </label>
                                 <InputDropdown choices={ENTITY_TYPE} />
                             </div>
 
-                            <div class="mb-3">
-                                <label for="textInput" class="form-label">
+                            <div className="mb-3">
+                                <label
+                                    htmlFor="textInput"
+                                    className="form-label"
+                                >
                                     Return Period From
                                 </label>
                                 <Input
@@ -78,8 +75,11 @@ const Paye = () => {
                                 />
                             </div>
 
-                            <div class="mb-3">
-                                <label for="textInput" class="form-label">
+                            <div className="mb-3">
+                                <label
+                                    htmlFor="textInput"
+                                    className="form-label"
+                                >
                                     Return Period To
                                 </label>
                                 <Input
@@ -89,8 +89,11 @@ const Paye = () => {
                                 />
                             </div>
 
-                            <div class="mb-3">
-                                <label for="textInput" class="form-label">
+                            <div className="mb-3">
+                                <label
+                                    htmlFor="textInput"
+                                    className="form-label"
+                                >
                                     Pin of Employee
                                 </label>
                                 <Input
@@ -101,8 +104,11 @@ const Paye = () => {
                                 />
                             </div>
 
-                            <div class="mb-3">
-                                <label for="textInput" class="form-label">
+                            <div className="mb-3">
+                                <label
+                                    htmlFor="textInput"
+                                    className="form-label"
+                                >
                                     Name of Employee
                                 </label>
 
@@ -114,41 +120,55 @@ const Paye = () => {
                                 />
                             </div>
 
-                            <div class="mb-3">
-                                <label for="dropdownInput" class="form-label">
+                            <div className="mb-3">
+                                <label
+                                    htmlFor="dropdownInput"
+                                    className="form-label"
+                                >
                                     Residential Status
                                 </label>
                                 <InputDropdown choices={RESIDENTIAL_STATUS} />
                             </div>
 
-                            <div class="mb-3">
-                                <label for="dropdownInput" class="form-label">
+                            <div className="mb-3">
+                                <label
+                                    htmlFor="dropdownInput"
+                                    className="form-label"
+                                >
                                     Type of Employee
                                 </label>
                                 <InputDropdown choices={TYPE_OF_EMPLOYEE} />
                             </div>
 
-                            <div class="mb-3">
-                                <label for="dropdownInput" class="form-label">
+                            <div className="mb-3">
+                                <label
+                                    htmlFor="dropdownInput"
+                                    className="form-label"
+                                >
                                     Disability Status
                                 </label>
                                 <InputDropdown choices={DISABILITY_CHOICE} />
                             </div>
 
-                            <div class="mb-3">
-                                <label for="textInput" class="form-label">
+                            <div className="mb-3">
+                                <label
+                                    htmlFor="textInput"
+                                    className="form-label"
+                                >
                                     Exemption Cert No
                                 </label>
                                 <Input
                                     title="textInput"
                                     placeholder="1234"
-                                    // classes="form-control"
                                     type="text"
                                 />
                             </div>
 
-                            <div class="mb-3">
-                                <label for="textInput" class="form-label">
+                            <div className="mb-3">
+                                <label
+                                    htmlFor="textInput"
+                                    className="form-label"
+                                >
                                     Basic Salary
                                 </label>
                                 <Input
@@ -160,8 +180,11 @@ const Paye = () => {
                                 />
                             </div>
 
-                            <div class="mb-3">
-                                <label for="textInput" class="form-label">
+                            <div className="mb-3">
+                                <label
+                                    htmlFor="textInput"
+                                    className="form-label"
+                                >
                                     House Allowance
                                 </label>
                                 <Input
@@ -173,8 +196,11 @@ const Paye = () => {
                                 />
                             </div>
 
-                            <div class="mb-3">
-                                <label for="textInput" class="form-label">
+                            <div className="mb-3">
+                                <label
+                                    htmlFor="textInput"
+                                    className="form-label"
+                                >
                                     Transport Allowance
                                 </label>
                                 <Input
@@ -186,8 +212,11 @@ const Paye = () => {
                                 />
                             </div>
 
-                            <div class="mb-3">
-                                <label for="textInput" class="form-label">
+                            <div className="mb-3">
+                                <label
+                                    htmlFor="textInput"
+                                    className="form-label"
+                                >
                                     Leave Pay
                                 </label>
                                 <Input
@@ -199,8 +228,11 @@ const Paye = () => {
                                 />
                             </div>
 
-                            <div class="mb-3">
-                                <label for="textInput" class="form-label">
+                            <div className="mb-3">
+                                <label
+                                    htmlFor="textInput"
+                                    className="form-label"
+                                >
                                     Total Tax Due
                                 </label>
                                 <Input
@@ -211,7 +243,7 @@ const Paye = () => {
                                     min="0"
                                 />
                             </div>
-                        </div>
+                        </form>
                     </div>
 
                     <Footer />
