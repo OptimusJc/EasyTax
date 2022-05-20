@@ -1,10 +1,19 @@
 import styles from "../paye/paye.module.css";
+import stylesW from "./witholding.module.css";
 import Input from "../../components/input/Input";
 import Footer from "../../components/footer/Footer";
-import stylesW from "./witholding.module.css";
 import SidebarNav from "../../components/sidebar_nav/SidebarNav";
 
+// core imports
+import { useEffect } from "react";
+
 const WitholdingVAT = () => {
+    useEffect(() => {
+        const totalInputField =
+            document.querySelectorAll("input[type=number]")[4];
+        totalInputField.readOnly = true;
+    });
+
     return (
         <div className="container">
             <div className={["row"]}>

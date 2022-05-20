@@ -1,6 +1,7 @@
+import styles from "./paye.module.css";
+import stylesW from "../witholding/witholding.module.css";
 import InputDropdown from "../../components/input/InputDropdown";
 import Input from "../../components/input/Input";
-import styles from "./paye.module.css";
 import Footer from "../../components/footer/Footer";
 import SidebarNav from "../../components/sidebar_nav/SidebarNav";
 import { React, useEffect, useState } from "react";
@@ -231,7 +232,10 @@ const Paye = () => {
                             <div className="mb-3">
                                 <label
                                     htmlFor="textInput"
-                                    className="form-label"
+                                    className={[
+                                        "form-label",
+                                        stylesW.total_label,
+                                    ].join(" ")}
                                 >
                                     Total Tax Due
                                 </label>

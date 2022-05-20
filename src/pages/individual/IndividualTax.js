@@ -1,13 +1,23 @@
 import stylesI from "./individual.module.css";
+import styles from "../paye/paye.module.css";
+import stylesW from "../witholding/witholding.module.css";
 import Input from "../../components/input/Input";
 import InputDropdown from "../../components/input/InputDropdown";
 import Footer from "../../components/footer/Footer";
-import styles from "../paye/paye.module.css";
 import SidebarNav from "../../components/sidebar_nav/SidebarNav";
+
+// core imports
+import { useEffect } from "react";
 
 const IndividualTax = () => {
     const TYPE_OF_RETURN = ["original", "amended"];
     const RESIDENTIAL_STATUS = ["resident", "non-resident"];
+
+    useEffect(() => {
+        const totalInputField =
+            document.querySelectorAll("input[type=number]")[10];
+        totalInputField.readOnly = true;
+    });
 
     return (
         <div className={[]}>
@@ -342,7 +352,10 @@ const IndividualTax = () => {
                             <div className="mb-3">
                                 <label
                                     htmlFor="textInput"
-                                    className="form-label"
+                                    className={[
+                                        "form-label",
+                                        stylesW.total_label,
+                                    ].join(" ")}
                                 >
                                     Total Tax Due
                                 </label>

@@ -1,3 +1,4 @@
 .total_label {
-    color: var(--bs-teal);
+    color: var(--bs-blue);
+    font-weight: 500;
 }
