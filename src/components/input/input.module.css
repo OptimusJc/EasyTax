@@ -22,3 +22,10 @@ textarea {
     height: 160px;
     color: yellow;
 }
+
+@media (min-width: 64em) {
+    input,
+    select {
+        padding: 1.4rem;
+    }
+}

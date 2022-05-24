@@ -1,10 +1,15 @@
+import { React, useEffect, useState } from "react";
+
+// style modules
 import styles from "./paye.module.css";
 import stylesW from "../witholding/witholding.module.css";
+
+// component imports
 import InputDropdown from "../../components/input/InputDropdown";
 import Input from "../../components/input/Input";
 import Footer from "../../components/footer/Footer";
 import SidebarNav from "../../components/sidebar_nav/SidebarNav";
-import { React, useEffect, useState } from "react";
+import Button from "../../components/button/Button";
 
 const Paye = () => {
     const DISABILITY_CHOICE = ["no", "yes"];
@@ -245,6 +250,19 @@ const Paye = () => {
                                     // classes="form-control"
                                     type="number"
                                     min="0"
+                                />
+                            </div>
+                            <div
+                                className={["mt-3", stylesW.submit_div].join(
+                                    " "
+                                )}
+                            >
+                                <Button
+                                    title="Submit"
+                                    classes={[
+                                        "btn btn-danger",
+                                        stylesW.submit_button,
+                                    ].join(" ")}
                                 />
                             </div>
                         </form>

@@ -1,13 +1,17 @@
+// core imports
+import { useEffect } from "react";
+
+// styles imports
 import stylesI from "./individual.module.css";
 import styles from "../paye/paye.module.css";
 import stylesW from "../witholding/witholding.module.css";
+
+// components imports
 import Input from "../../components/input/Input";
 import InputDropdown from "../../components/input/InputDropdown";
 import Footer from "../../components/footer/Footer";
 import SidebarNav from "../../components/sidebar_nav/SidebarNav";
-
-// core imports
-import { useEffect } from "react";
+import Button from "../../components/button/Button";
 
 const IndividualTax = () => {
     const TYPE_OF_RETURN = ["original", "amended"];
@@ -27,7 +31,7 @@ const IndividualTax = () => {
 
                     <div className={["col", "col-md-6", styles.col].join(" ")}>
                         <h3 className={["h3"]}>INDIVIDUAL</h3>
-                        <div className={[""]}>
+                        <form>
                             <div className="mb-3">
                                 <label
                                     htmlFor="dropdownInput"
@@ -366,7 +370,21 @@ const IndividualTax = () => {
                                     type="number"
                                 />
                             </div>
-                        </div>
+
+                            <div
+                                className={["mt-3", stylesW.submit_div].join(
+                                    " "
+                                )}
+                            >
+                                <Button
+                                    title="Submit"
+                                    classes={[
+                                        "btn btn-danger",
+                                        stylesW.submit_button,
+                                    ].join(" ")}
+                                />
+                            </div>
+                        </form>
                     </div>
 
                     <Footer />

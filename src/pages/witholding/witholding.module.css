@@ -2,3 +2,29 @@
     color: var(--bs-blue);
     font-weight: 500;
 }
+
+.submit_div {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.submit_button {
+    padding-block: 0.8rem;
+    padding-inline: 3rem;
+    background-color: var(--red);
+    font-size: 0.9rem;
+}
+
+.link_button {
+    padding-inline: 2rem;
+    padding-block: 0.8rem;
+    margin-inline-end: 2rem;
+}
+
+.resultsDiv {
+    width: 100%;
+    height: 200px;
+    border: 1px solid var(--black);
+    padding: 1rem;
+    overflow: scroll;
+}

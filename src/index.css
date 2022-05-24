@@ -366,7 +366,7 @@ body {
         "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: var(--black) !important;
+    color: var(--bs-black) !important;
 }
 
 @media (min-width: 64em) {

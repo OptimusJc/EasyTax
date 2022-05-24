@@ -36,16 +36,22 @@ const About = () => {
                             </div>
                             <div className={[styles.card_body]}>
                                 <h6
-                                    className={["lead", styles.card_lead].join(
-                                        " "
-                                    )}
+                                    className={[
+                                        "lead fw-bold",
+                                        styles.card_lead,
+                                    ].join(" ")}
                                 >
                                     about our agency
                                 </h6>
-                                <h3 className="h3">get in touch with us</h3>
+                                {/* <h3 className="h3">get in touch with us</h3> */}
                                 <p className={["card-text"]}>
-                                    lorem ipsum dolor sit amet, consectetur adip
-                                    lorem ipsum dolor sit amet, consectetur adip
+                                    Easy tax application is a software system
+                                    designed with the sole purpose of filling
+                                    returns automatically.It is also equipped
+                                    with a database which enables our clients to
+                                    monitor all their transactions. The software
+                                    has been designed to be well efficient and
+                                    easy to use
                                 </p>
                             </div>
                         </div>
