@@ -7,7 +7,7 @@ const Admin = () => {
         <div className="container-fluid">
             <div className="row">
                 <div className={["col", styles.admin_col].join(" ")}>
-                    <p className="fs-4">Admin Panel</p>
+                    <p className="fs-4">Dashboard Panel</p>
                     <div className="table-responsive mb-4">
                         <table className="table caption-top table-striped table-bordered">
                             <caption>Show list of filed users</caption>

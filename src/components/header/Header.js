@@ -105,7 +105,7 @@ const Header = () => {
                                 </li>
                                 <li className="nav-item">
                                     <Link to="/admin" className="nav-link">
-                                        Admin
+                                        Dashboard
                                     </Link>
                                 </li>
                             </ul>
