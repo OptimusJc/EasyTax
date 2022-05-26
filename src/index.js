@@ -1,8 +1,5 @@
-// bootstrap imports
+import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-// import $ from "jquery";
-// import Popper from "popper.js";
-import "bootstrap/dist/js/bootstrap.bundle.js";
 
 // react imports
 import React from "react";
@@ -12,7 +9,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./index.css";
 import App from "./App";
 
-import Admin from "./pages/admin/Admin.jsx";
+import IndividualDashboard from "./pages/dashboard/individualDash/IndividualDashboard.jsx";
+import PayeDashboard from "./pages/dashboard/payeDash/PayeDashboard";
+import WitholdingDashboard from "./pages/dashboard/witholdingDash/WitholdingDashboard";
+import Dashboard from "./pages/dashboard/Dashboard.jsx";
 import Register from "./pages/register/Register";
 import Login from "./pages/login/Login";
 import About from "./pages/about/About";
@@ -29,7 +29,16 @@ root.render(
     <BrowserRouter>
         <Routes>
             <Route path="" element={<App />}>
-                <Route path="/admin" element={<Admin />} />
+                <Route path="/dashboard" element={<Dashboard />} />
+                <Route
+                    path="/individual-dash"
+                    element={<IndividualDashboard />}
+                />
+                <Route
+                    path="/witholding-dash"
+                    element={<WitholdingDashboard />}
+                />
+                <Route path="/paye-dash" element={<PayeDashboard />} />
                 <Route path="/" element={<Login />} />
                 <Route path="/register" element={<Register />} />
                 <Route path="/login" element={<Login />} />

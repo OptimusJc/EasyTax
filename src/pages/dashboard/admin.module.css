@@ -4,6 +4,13 @@
     }
 }
 
+.select {
+    width: auto;
+    padding: 0.8rem 2rem;
+    outline: 2px solid red;
+    margin-bottom: 1rem;
+}
+
 .admin_col .tbody .tr td {
     font-size: 0.8rem;
     padding-block: 1rem;

@@ -1,8 +1,10 @@
-import styles from "./admin.module.css";
+// import styles from "./admin.module.css";
 
 const TableRow = ({ scopeNumber }) => {
     return (
-        <tr className={styles.tr}>
+        <tr
+        // className={styles.tr}
+        >
             <th scope="row">{scopeNumber}</th>
             <td>Original</td>
             <td>01/01/2021</td>
