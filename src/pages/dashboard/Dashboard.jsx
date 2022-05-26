@@ -27,7 +27,9 @@ const Admin = () => {
                         }}
                     >
                         <option value="paye">
-                            <Link to="/paye-dash">PAYE</Link>
+                            <Link to="/paye-dash" selected>
+                                PAYE
+                            </Link>
                         </option>
                         <option value="witholding">
                             <Link to="/witholding-dash">Witholding VAT</Link>
