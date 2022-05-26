@@ -267,8 +267,6 @@ const Paye = () => {
                             </div>
                         </form>
                     </div>
-
-                    <Footer />
                 </div>
             </div>
         </div>

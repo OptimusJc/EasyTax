@@ -386,8 +386,6 @@ const IndividualTax = () => {
                             </div>
                         </form>
                     </div>
-
-                    <Footer />
                 </div>
             </div>
         </div>

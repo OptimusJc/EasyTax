@@ -168,8 +168,6 @@ const WitholdingVAT = () => {
                         </div>
                     </form>
                 </div>
-
-                <Footer />
             </div>
         </div>
     );

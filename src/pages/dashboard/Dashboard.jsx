@@ -15,6 +15,7 @@ const Admin = () => {
             <div className="row">
                 <div className={["col", styles.admin_col].join(" ")}>
                     <p className="fs-4">Dashboard Panel</p>
+                    <p className={styles.balance}>Balance 5000ksh</p>
                     <p>Dashboard Select</p>
                     <select
                         className={["form-select", styles.select].join(" ")}

@@ -10,8 +10,6 @@ const Home = () => {
                         your tax returns.
                     </p>
                 </div>
-
-                <Footer />
             </div>
         </div>
     );
