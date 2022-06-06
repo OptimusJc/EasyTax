@@ -28,7 +28,8 @@
 
 .btn_div {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+
     margin-bottom: 2rem;
 }
 
@@ -40,4 +41,22 @@
 .btn_div .btn_submit {
     margin-right: 1rem;
     padding: 0.7rem 2rem;
+}
+
+.fileInputDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* box-shadow: 0 0 18px hsla(0, 100%, 0%, 0.1); */
+    padding-left: 1rem;
+    background-color: var(--white);
+}
+
+.fileInputDiv .input {
+    padding: 1rem 0;
+}
+
+.inputDiv {
+    display: flex;
+    gap: 3rem;
 }

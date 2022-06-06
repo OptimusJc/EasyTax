@@ -7,6 +7,8 @@ import IndividualDashboard from "./individualDash/IndividualDashboard";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
+import { BiDownload } from "react-icons/bi";
+
 const Admin = () => {
     const [selection, setSelection] = useState("");
 
@@ -17,27 +19,38 @@ const Admin = () => {
                     <p className="fs-4">Dashboard Panel</p>
                     <p className={styles.balance}>Balance 5000ksh</p>
                     <p>Dashboard Select</p>
-                    <select
-                        className={["form-select", styles.select].join(" ")}
-                        aria-label="Default select"
-                        value={selection}
-                        onChange={(e) => {
-                            const selectedSelection = e.target.value;
-                            setSelection(selectedSelection);
-                        }}
-                    >
-                        <option value="paye">
-                            <Link to="/paye-dash" selected>
-                                PAYE
-                            </Link>
-                        </option>
-                        <option value="witholding">
-                            <Link to="/witholding-dash">Witholding VAT</Link>
-                        </option>
-                        <option value="individual">
-                            <Link to="/individual-dash">Individual</Link>
-                        </option>
-                    </select>
+
+                    <div className={styles.inputDiv}>
+                        <select
+                            className={["form-select", styles.select].join(" ")}
+                            aria-label="Default select"
+                            value={selection}
+                            onChange={(e) => {
+                                const selectedSelection = e.target.value;
+                                setSelection(selectedSelection);
+                            }}
+                        >
+                            <option value="paye">
+                                <Link to="/paye-dash">PAYE</Link>
+                            </option>
+                            <option value="witholding">
+                                <Link to="/witholding-dash">
+                                    Witholding VAT
+                                </Link>
+                            </option>
+                            <option value="individual">
+                                <Link to="/individual-dash">Individual</Link>
+                            </option>
+                        </select>
+                        <div className={styles.fileInputDiv}>
+                            <label htmlFor="fileInput">Import csv file</label>
+                            <input
+                                type="file"
+                                id="fileInput"
+                                className={styles.input}
+                            />
+                        </div>
+                    </div>
 
                     {selection === "paye" ? <PayeDashboard /> : ""}
                     {selection === "witholding" ? <WitholdingDashboard /> : ""}
@@ -45,18 +58,25 @@ const Admin = () => {
 
                     <div className={styles.btn_div}>
                         <Button
-                            title="Delete"
-                            classes={[
-                                "btn btn-secondary",
-                                styles.btn_delete,
-                            ].join(" ")}
+                            classes="btn btn-outline-primary"
+                            title="Download csv"
                         />
-                        <Button
-                            title="Submit"
-                            classes={["btn btn-danger", styles.btn_submit].join(
-                                " "
-                            )}
-                        />
+                        <div>
+                            <Button
+                                title="Delete"
+                                classes={[
+                                    "btn btn-secondary",
+                                    styles.btn_delete,
+                                ].join(" ")}
+                            />
+                            <Button
+                                title="Submit"
+                                classes={[
+                                    "btn btn-danger",
+                                    styles.btn_submit,
+                                ].join(" ")}
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
