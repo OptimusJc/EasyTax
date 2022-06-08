@@ -7,7 +7,9 @@ import IndividualDashboard from "./individualDash/IndividualDashboard";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-import { BiDownload } from "react-icons/bi";
+import { BiSearch } from "react-icons/bi";
+import { TiFilter } from "react-icons/ti";
+import Input from "../../components/input/Input";
 
 const Admin = () => {
     const [selection, setSelection] = useState("");
@@ -18,7 +20,45 @@ const Admin = () => {
                 <div className={["col", styles.admin_col].join(" ")}>
                     <p className="fs-4">Dashboard Panel</p>
                     <p className={styles.balance}>Balance 5000ksh</p>
-                    <p>Dashboard Select</p>
+                    <div className={styles.dash}>
+                        <p>Dashboard Select</p>
+                        {/* <div className={styles.search_box}>
+                            <Input
+                                type="text"
+                                placeholder="search here..."
+                                classes={styles.search_text}
+                            />
+                            <Button
+                                classes={styles.search_button}
+                                title="Search"
+                            >
+                                <TiFilter className={styles.filter_icon} />
+                            </Button>
+                            <BiSearch className={styles.search_icon} />
+                        </div> */}
+
+                        <div className={styles.search_area}>
+                            <p>Filter options</p>
+                            <div>
+                                <Input
+                                    type="date"
+                                    name="startDate"
+                                    classes={styles.date}
+                                />
+                                <Input
+                                    type="date"
+                                    name="endDate"
+                                    classes={styles.date}
+                                />
+                                <Button
+                                    title="Search"
+                                    classes={styles.search_button}
+                                >
+                                    <TiFilter className={styles.filter_icon} />
+                                </Button>
+                            </div>
+                        </div>
+                    </div>
 
                     <div className={styles.inputDiv}>
                         <select
